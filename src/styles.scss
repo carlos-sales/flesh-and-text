@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: url('assets/images/background/background.png') no-repeat center center fixed; background-size: cover;}
+.center-elements
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.center-text
+{
+  text-align: center;
+}
+.container-xsmall, .container-small
+{
+  width: 90%;
+}
+.container-medium
+{
+  width: 720px;
+}
+.container-large, .container-xlarge
+{
+  width: 960px;
+}
