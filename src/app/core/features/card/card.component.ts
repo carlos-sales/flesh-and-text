@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogActions, MatDialogContent,  MatDialogClose} from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet';
-import { CardTextComponent } from '../card-text/card-text.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @Component({
   selector: 'card',
@@ -29,9 +29,9 @@ export class CardComponent
 
   openSheet()
   {
-    this._bottomSheet.open(CardTextComponent,
+    this._bottomSheet.open(CardDetailsComponent,
       {
-        data: this.card.functional_text_plain,
+        data: this.card,
       }
     );
   }

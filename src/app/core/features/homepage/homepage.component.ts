@@ -41,7 +41,7 @@ export class HomepageComponent
   initForm()
   {
     this.form = this.formBuilder.group({
-      card_id: [''],
+      card_id: ['MON294'],
     });
   }
 
