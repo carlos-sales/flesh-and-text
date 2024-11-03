@@ -48,8 +48,6 @@ export class HomepageComponent
   openDialog()
   {
     const card = this.serviceCards.getByID(this.form.value.card_id);
-    // console.log(card)
-    // console.log(this.serviceCards.getByID(this.form.value.card_id))
     const dialogRef = this.dialog.open(CardComponent, {
       data: card,
     });
