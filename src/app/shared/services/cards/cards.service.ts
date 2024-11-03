@@ -25,7 +25,6 @@ export class CardsService
 
   getByID( id: string )
   {
-    // this.card = this.all_cards.find( (card: any) => card.printings.find( (printing_card: any) => printing_card.id == 'MON294' ) )
-    return this.all_cards.find( (card: any) => card.printings.find( (printing_card: any) => printing_card.id == 'MON294' ) );
+    return this.all_cards.find( (card: any) => card.printings.find( (printing_card: any) => printing_card.id == id ) );
   }
 }

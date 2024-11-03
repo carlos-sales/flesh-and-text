@@ -3,12 +3,16 @@
     <form [formGroup]="form">
       <mat-form-field>
         <mat-label>ID CARD</mat-label>
-        <input matInput formControlName="card_id" placeholder="Ex. MON294" oninput="this.value = this.value.toUpperCase()">
+        <input matInput formControlName="card_id" placeholder="Ex. MON294" [patterns]="pattern" mask="WWWXXX" oninput="this.value = this.value.toUpperCase()">
         @if (form.value.card_id)
         {
-          <button matSuffix mat-icon-button aria-label="Clear" (click)="openDialog()">
+          <button matSuffix mat-icon-button (click)="openDialog()">
             <mat-icon color="primary">send</mat-icon>
           </button>
+        }
+        @if (form.controls['card_id'].hasError('not-found'))
+        {
+          <mat-error>Card não encontrado para o ID informado</mat-error>
         }
       </mat-form-field>
     </form>
